@@ -11,5 +11,15 @@ public class JavaPalindrome {
 
         System.out.println("Inserisci una parola: ");
         String word = scan.nextLine();
+        String reversedWord = "" ;
+
+        for (int i = word.length() - 1; i >= 0 ; i--) {
+            reversedWord += word.charAt(i);
+        }
+
+        if (word.equals(reversedWord))
+            System.out.println("La parola " + word + " è palindroma");
+        else
+            System.out.println("La parola " + word +  " non è palindroma");
     }
 }
